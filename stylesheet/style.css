@@ -1,0 +1,31 @@
+    body{
+    background-color: #001C30;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#table{
+    display: grid;
+    width: min-content;
+    height: min-content;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    background-color: red;
+    gap: 1em;
+}
+
+button {
+    cursor: pointer;
+    padding: 0;
+    width: 3em;
+    height: 3em;
+    background-color: aliceblue;
+    font-size: 3em;
+}
+button:hover{
+    outline: 2px inset rgb(0, 0, 0);
+    background-color: antiquewhite;
+}
