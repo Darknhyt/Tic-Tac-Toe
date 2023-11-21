@@ -12,16 +12,42 @@
     <header>
         <h1>Tic Tac Toe</h1>
     </header>
-    <div id="table">
-            <div><button class="box" data-row="1" data-col="1" type="button"></button></div>
-            <div><button class="box" data-row="1" data-col="2" type="button"></button></div>
-            <div><button class="box" data-row="1" data-col="3" type="button"></button></div>
-            <div><button class="box" data-row="2" data-col="1" type="button"></button></div>
-            <div><button class="box" data-row="2" data-col="2" type="button"></button></div>
-            <div><button class="box" data-row="2" data-col="3" type="button"></button></div>
-            <div><button class="box" data-row="3" data-col="1" type="button"></button></div>
-            <div><button class="box" data-row="3" data-col="2" type="button"></button></div>
-            <div><button class="box" data-row="3" data-col="3" type="button"></button></div>
-    </div id="table">
+    
+    <div id="content">
+        <aside id="options">
+            <form action="#">
+                <h3>Options</h3>
+                <label for="player-one">Player ❌</label>
+                <input type="text" id="player-one" value="Player 1" placeholder="Player 1">
+                <label for="player-two">Player ⭕</label>
+                <input type="text" id="player-two" value="Player 2" placeholder="Player 2">
+                <button type="button" id="opt-btn">NEW GAME</button>
+            </form>
+        </aside>
+        <aside id="status">
+            <div>
+                <h3>Score</h3>
+                <div id="score">
+                    <span id="player-name-one">Player 1: </span><span id="score-1">0</span><br>
+                    <span id="player-name-two">Player 2: </span><span id="score-2">0</span>
+                </div>
+                <h3>Info</h3>
+                <span id="i-back"></span>
+                <span id="info">❌ Player 1 turn</span>
+                <button type="button" id="rst-btn">NEW ROUND</button>
+            </div>
+        </aside>
+        <div id="table">
+                <div><button class="box" data-row="1" data-col="1" type="button"></button></div>
+                <div><button class="box" data-row="1" data-col="2" type="button"></button></div>
+                <div><button class="box" data-row="1" data-col="3" type="button"></button></div>
+                <div><button class="box" data-row="2" data-col="1" type="button"></button></div>
+                <div><button class="box" data-row="2" data-col="2" type="button"></button></div>
+                <div><button class="box" data-row="2" data-col="3" type="button"></button></div>
+                <div><button class="box" data-row="3" data-col="1" type="button"></button></div>
+                <div><button class="box" data-row="3" data-col="2" type="button"></button></div>
+                <div><button class="box" data-row="3" data-col="3" type="button"></button></div>
+        </div id="table">
+    </div>
 </body>
 </html>

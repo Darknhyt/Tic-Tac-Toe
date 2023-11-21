@@ -5,7 +5,12 @@
     flex-direction: column;
     align-items: center;
 }
-
+h3, h1{
+    margin: 0.2em 0
+ }
+ p{
+    line-height: 0.6em;
+ }
 #table{
     display: grid;
     width: min-content;
@@ -13,19 +18,98 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     justify-content: center;
-    background-color: red;
+    background-color: darkred;
     gap: 1em;
+    line-height: 0;
 }
+table div{
+    padding: 0;
+    margin: 0;
+}
+ #content{
+    display: flex;
 
-button {
+ }
+ #options form{
+    max-width: 10em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: absolute;
+    left: 0;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.445);
+ }
+ #status > div{
+    max-width: 10em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+    position: absolute;
+    right: 0;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.445);
+ }
+
+ #info{
+    width: 9em;
+    height: 1.2em;
+    align-items: center;
+    padding: 0.4em;
+    z-index: 1;
+ }
+ #i-back{
+    background-color: #001C30;
+    border-radius: 10px;
+    width: 9em;
+    height: 2em;
+    position: absolute;
+    bottom: 6.4em;
+ }
+.box {
     cursor: pointer;
     padding: 0;
-    width: 3em;
-    height: 3em;
+    width: 28svh;
+    height: 28svh;
     background-color: aliceblue;
-    font-size: 3em;
+    font-size: 5em;
+    transition: transform 0.2s;
 }
-button:hover{
-    outline: 2px inset rgb(0, 0, 0);
-    background-color: antiquewhite;
+.box:hover{
+    outline: 3px inset rgb(0, 0, 0);
+}
+.box:active{
+    transform: scale(1.1);
+}
+.busy {
+    background-color: aliceblue;
+    cursor: default;
+}
+.busy:hover{
+    outline: none;
+    background-color: aliceblue;
+}
+.busy:active {
+    transform: scale(1);
+}
+#opt-btn, #rst-btn{
+    cursor: pointer;
+    width: 5em;
+    border-radius: 5px;
+    font-weight: bolder;
+    align-self: center;
+    background-color: #64CCC5;
+    margin: 1em;
+    padding: 0.2em;
+}
+.rotate{
+    animation: wheel 0.2s linear;
+}
+@keyframes wheel {
+    0%{transform: scaleY(1);}
+    25%{transform: scaleY(0) translateY(-3em);}
+    75%{transform: scaleY(0) translateY(2em);}
+    100%{transform: scaleY(1);}
 }
